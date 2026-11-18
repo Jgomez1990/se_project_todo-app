@@ -35,6 +35,11 @@ const generateTodo = (data) => {
   return todoElement;
 };
 
+const renderTodo = (data) => {
+  const todoElement = generateTodo(data);
+  todosList.append(todoElement);
+};
+
 addTodoButton.addEventListener("click", () => {
   openModal(addTodoPopup);
 });
@@ -53,15 +58,13 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date, id };
-  const todo = generateTodo(values);
-  todosList.append(todo);
+  renderTodo(values);
   formValidator.resetValidation();
   closeModal(addTodoPopup);
 });
 
 initialTodos.forEach((item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
+  renderTodo(item);
 });
 
 const formValidator = new FormValidator(validationConfig, addTodoForm);
