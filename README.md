@@ -34,4 +34,4 @@ This project uses the following technologies and techniques:
 
 This project is deployed on GitHub Pages:
 
-- GitHub Pages link: To be added after deployment.
+- GitHub Pages link: https://jgomez1990.github.io/se_project_todo-app/
